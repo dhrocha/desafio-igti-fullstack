@@ -27,7 +27,7 @@ export default function AddTransaction() {
     }
 
     const result = await axios.post(
-      'http://localhost:3001/api/transaction/',
+      'https://dhrocha-desafio-final.herokuapp.com/api/transaction/',
       state.insertData
     )
 

@@ -12,7 +12,7 @@ export default function Item(props) {
 
   const handleDelete = async () => {
     const result = await axios.delete(
-      'http://localhost:3001/api/transaction/' + data._id
+      'https://dhrocha-desafio-final.herokuapp.com/api/transaction/' + data._id
     )
     console.log(result)
   }

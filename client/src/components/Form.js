@@ -53,9 +53,12 @@ export default function Form() {
         type: 'SET_SELECT_VALUE',
         payload: period,
       })
-      const data = await axios.get('http://localhost:3001/api/transaction', {
-        params: { period: period },
-      })
+      const data = await axios.get(
+        'https://dhrocha-desafio-final.herokuapp.com/api/transaction',
+        {
+          params: { period: period },
+        }
+      )
       dispatch({ type: 'SET_DATA', payload: data.data })
     }
     getInitialData()
@@ -63,9 +66,12 @@ export default function Form() {
 
   const handleChange = async (e) => {
     dispatch({ type: 'SET_SELECT_VALUE', payload: e.target.value })
-    const data = await axios.get('http://localhost:3001/api/transaction', {
-      params: { period: e.target.value },
-    })
+    const data = await axios.get(
+      'https://dhrocha-desafio-final.herokuapp.com/api/transaction',
+      {
+        params: { period: e.target.value },
+      }
+    )
     dispatch({ type: 'SET_DATA', payload: data.data })
   }
 

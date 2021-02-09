@@ -26,7 +26,7 @@ export default function UpdateTransaction(props) {
     const updateData = { ...state.insertData, _id: state.updateId }
 
     const result = await axios.patch(
-      'http://localhost:3001/api/transaction/',
+      'https://dhrocha-desafio-final.herokuapp.com/api/transaction/',
       updateData
     )
 
